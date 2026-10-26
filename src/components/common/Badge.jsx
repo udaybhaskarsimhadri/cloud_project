@@ -1,0 +1,37 @@
+import React from 'react';
+
+const Badge = ({
+  children,
+  variant = 'primary',
+  size = 'md',
+  className = '',
+  icon: Icon,
+}) => {
+  const baseStyles = 'inline-flex items-center font-bold rounded-full';
+
+  const variants = {
+    primary: 'bg-white text-[#0F172A] dark:bg-slate-800 dark:text-slate-100 border border-slate-200 dark:border-slate-700 shadow-sm',
+    secondary: 'bg-emerald-50 text-emerald-900 dark:bg-emerald-950/70 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-700',
+    accent: 'bg-amber-50 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-200 dark:border-amber-700',
+    danger: 'bg-rose-50 text-rose-900 dark:bg-rose-950/70 dark:text-rose-200 border border-rose-200 dark:border-rose-700',
+    neutral: 'bg-white text-[#0F172A] dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 shadow-sm',
+    easy: 'bg-emerald-100 text-emerald-950 dark:bg-emerald-950/70 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-700',
+    moderate: 'bg-amber-100 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-300 dark:border-amber-700',
+    challenging: 'bg-rose-100 text-rose-950 dark:bg-rose-950/70 dark:text-rose-200 border border-rose-300 dark:border-rose-700',
+  };
+
+  const sizes = {
+    sm: 'text-xs px-2.5 py-0.5 gap-1.5',
+    md: 'text-xs px-3.5 py-1.5 gap-2 font-bold',
+    lg: 'text-sm px-4 py-2 gap-2 font-bold',
+  };
+
+  return (
+    <span className={`${baseStyles} ${variants[variant] || variants.primary} ${sizes[size] || sizes.md} ${className}`}>
+      {Icon && <Icon className="w-3.5 h-3.5 text-amber-500 fill-amber-500 shrink-0" />}
+      <span>{children}</span>
+    </span>
+  );
+};
+
+export default Badge;

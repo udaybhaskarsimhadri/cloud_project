@@ -1,0 +1,17 @@
+{
+  "short_name": "AdventureX",
+  "name": "AdventureX – Cloud-Based Adventure Tourism Platform",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0F172A",
+  "theme_color": "#10B981",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "description": "Book verified high-altitude Himalayan treks, river rafting, and wilderness expeditions."
+}
